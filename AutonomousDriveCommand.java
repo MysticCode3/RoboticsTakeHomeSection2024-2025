@@ -31,7 +31,7 @@ public class AutonomousDriveCommand extends CommandBase {
     public void execute() {
         // Moves straight for 15 seconds
         if (!isTurning) {
-            if (timer.get() < 15) {
+            if (timer.get() < duration) {
                 driveSubsystem.arcadeDrive(speed, 0);
             } else {
                 isTurning = true;
