@@ -10,20 +10,16 @@ public class ClawSubsystem extends SubsystemBase {
     private final DoubleSolenoid clawSolenoid;
 
     public ClawSubsystem() {
-        // Initialize the compressor
         compressor = new Compressor(PneumaticsModuleType.CTREPCM);
         compressor.enableDigital();
 
-        // Initialize the solenoid
         clawSolenoid = new DoubleSolenoid(PneumaticsModuleType.CTREPCM);
     }
 
-    // Method to open the claw
     public void openClaw() {
         clawSolenoid.set(DoubleSolenoid.Value.kForward);
     }
 
-    // Method to close the claw
     public void closeClaw() {
         clawSolenoid.set(DoubleSolenoid.Value.kReverse);
     }
