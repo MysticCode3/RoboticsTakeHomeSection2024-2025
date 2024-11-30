@@ -18,6 +18,6 @@ public class CloseClawCommand extends CommandBase {
 
     @Override
     public boolean isFinished() {
-        return true; // The action is instantaneous
+        return true;
     }
 }
